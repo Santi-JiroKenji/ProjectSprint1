@@ -1,0 +1,31 @@
+<div class="container">
+  <mat-card class="card">      
+        <h1>ระบบห้องแลปตรวจโรค/ตรวจสุขภาพ</h1>
+  </mat-card>
+  <br><br>
+  
+  <div>
+  <mat-card class="card-login">
+    <mat-card>
+        <h2>เข้าสู่ระบบ</h2>
+    </mat-card>
+    <mat-card class="content">
+      <form #form="ngForm" (ngSubmit)="login()">
+        <mat-form-field>
+          <input matInput placeholder="Username" [(ngModel)]="user.username" name="username">
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+          <input matInput type="password" placeholder="Password" [(ngModel)]="user.password" name="password">
+        </mat-form-field>
+
+        <div class="button">
+          <button mat-raised-button color="primary" type="submit" [disabled]="user.username == null || user.password == null">เข้าสู่ระบบ</button>
+          &nbsp;
+          <button mat-raised-button routerLink="/homemain">ย้อนกลับ</button>
+        </div>
+      </form>
+    </mat-card>
+  </mat-card>
+  </div>
+</div>
